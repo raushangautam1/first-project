@@ -12,10 +12,10 @@ package pageObject;
 		By Text= By.xpath("//*[@id=\"option-section\"]/div[6]/span");
 		
 		
-		public LandingPage(WebDriver driver) {
-			this.driver=driver;
-			// TODO Auto-generated constructor stub
-		}
+	/*
+	 * public LandingPage(WebDriver driver) { this.driver=driver; // TODO
+	 * Auto-generated constructor stub }
+	 */
 
 		public WebElement CheckElement()
 		{
