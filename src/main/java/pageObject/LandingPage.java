@@ -16,7 +16,8 @@ public class LandingPage {
 	public void clickOnViewHeatmapButton() {
 		try {
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
+		} catch (InterruptedException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -26,5 +27,28 @@ public class LandingPage {
 		Reporter.log("User clicks on View Heatmap button.", true);
 //		return driver.findElement(Button);
 	}
+public void heatMapPage()
+{
+	String actualTitle= driver.getTitle();
+	String expectedTitle = "VWO Experience Optimization Platform";
+	if
+	(actualTitle.equalsIgnoreCase(expectedTitle))
+		System.out.println("Title Matched");
+	 
+	else {
+		System.out.println("Title didn't match");
+	Reporter.log("User is not on View Heatmap page.", true);
+	}
 
 }
+
+
+public void moveToFrame()
+{ 
+	By moveToFrame = By.id("heatmap-iframe");
+	driver.switchTo().frame("moveToFrame");
+	Reporter.log("Useris on new frame.", true);
+
+	}
+}
+
