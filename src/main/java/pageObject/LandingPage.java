@@ -22,7 +22,7 @@ public class LandingPage {
 			e.printStackTrace();
 		}
 		
-		By viewHeatmap = By.xpath("//div[contains(text(),'View heatmap')]");
+		By viewHeatmap = By.xpath("//button[contains(text(),'View heatmap')]");
 		driver.findElement(viewHeatmap).click();
 		Reporter.log("User clicks on View Heatmap button.", true);
 //		return driver.findElement(Button);

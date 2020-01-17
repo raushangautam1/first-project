@@ -17,14 +17,14 @@ public class base {
 	public WebDriver initializeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\Raushan\\Wingify\\src\\main\\java\\resources\\data.properties");
+				"C:\\Users\\admin\\Desktop\\first script\\first-project\\src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
 		//String appurl=prop.getProperty("url");
 		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
 		if (browserName.equals("chrome")) {
-			//WebDriverManager.chromedriver().version("2.41").setup();
-	System.setProperty("webdriver.chrome.driver","C:\\Users\\Raushan\\Downloads\\sql server\\chromedriver_win32 (1)\\chromedriver.exe");
+			WebDriverManager.chromedriver().version("2.41").setup();
+	//System.setProperty("webdriver.chrome.driver","C:\\Users\\Raushan\\Downloads\\sql server\\chromedriver_win32 (1)\\chromedriver.exe");
 			driver = new ChromeDriver();	
 		} else if (browserName == "firefox") {
 
@@ -38,4 +38,14 @@ public class base {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		return driver;
 	}
+	
+	public String initializeDriver1() throws IOException {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(
+				"C:\\Users\\admin\\Desktop\\first script\\first-project\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		String appurl=prop.getProperty("url");
+		return appurl;
+	}
+	
 }
