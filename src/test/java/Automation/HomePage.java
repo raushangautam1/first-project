@@ -16,8 +16,8 @@ public class HomePage extends base{
 		driver.get(initializeDriver1());		
 		LandingPage landingPage= new LandingPage(driver);	
 		landingPage.clickOnViewHeatmapButton();
-		landingPage.heatMapPage();
-		landingPage.moveToFrame();
+		//landingPage.heatMapPage();
+		//landingPage.moveToFrame();
 	
 	
 	}
